@@ -13,11 +13,15 @@ let testCasesOne: [(Double, Double)] = [
     (input: -2, expectedOutput: -4),
     (input: 99, expectedOutput: 198)
 ]
+func double(input: Double) -> Double {
+    let result = input * 2
+    return result
+}
 
-//for (input, expectedOutput) in testCasesOne {
-//    let output = double(input)
-//    assert(output == expectedOutput, "Was expecting \(expectedOutput) for input \(input), but got \(output)")
-//}
+for (input, expectedOutput) in testCasesOne {
+    let output = double(input: input)
+    assert(output == expectedOutput, "Was expecting \(expectedOutput) for input \(input), but got \(output)")
+}
 
 
 
@@ -33,11 +37,18 @@ let testCasesTwo: [(Double, Double, Double)] = [
     (inputOne: -5, inputTwo: -3, expectedOutput: -5),
     (inputOne: 2.3, inputTwo: 2.03, expectedOutput: 2.03)
 ]
+func smallest(of inputOne: Double, and inputTwo: Double) -> Double {
+    if inputOne > inputTwo {
+        return inputTwo
+    } else {
+        return inputOne
+    }
+}
 
-//for (inputOne, inputTwo, expectedOutput) in testCasesTwo {
-//    let output = smallest(of: inputOne, and: inputTwo)
-//    assert(output == expectedOutput, "Was expecting \(expectedOutput) for inputs \(inputOne) and \(inputTwo) but got \(output)")
-//}
+for (inputOne, inputTwo, expectedOutput) in testCasesTwo {
+    let output = smallest(of: inputOne, and: inputTwo)
+    assert(output == expectedOutput, "Was expecting \(expectedOutput) for inputs \(inputOne) and \(inputTwo) but got \(output)")
+}
 
 // Question Three
 
