@@ -23,8 +23,6 @@ for (input, expectedOutput) in testCasesOne {
     assert(output == expectedOutput, "Was expecting \(expectedOutput) for input \(input), but got \(output)")
 }
 
-
-
 // Question Two
 
 // Write a function named smallest(of:and:) that takes in two Doubles and returns the smaller number
@@ -62,6 +60,11 @@ let testCasesThree: [([Double], Double)] = [
     (input: [0,0,0,0,0,0,0,0,0,0], expectedOutput: 0),
     (input: [-4,-59,-348,-34,-4], expectedOutput: -348),
 ]
+func smallestValue(input: [Double]) -> Double {
+    let outPut = smallest(of: input) {
+        
+    }
+}
 
 //for (input, expectedOutput) in testCasesThree {
 //    let output = smallestValue(in: input)
